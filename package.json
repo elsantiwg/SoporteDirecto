@@ -4,7 +4,8 @@
   "description": "api rest para proyecto de incidencias",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/elsantiwg/SoporteDirecto/issues"
   },
-  "homepage": "https://github.com/elsantiwg/SoporteDirecto#readme"
+  "homepage": "https://github.com/elsantiwg/SoporteDirecto#readme",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }
