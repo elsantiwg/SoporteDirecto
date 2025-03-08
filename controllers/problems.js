@@ -5,7 +5,15 @@ function holaMundo(require,response){
 }
 
 function createProblems(req,res){
-    console.log("Creando problema");
+    const problems = Problems();
+    const params = req.body;
+
+    problems.title =params.title;
+    problems.description = params.description;
+    problems.user = params.user;
+    problems.severity = params.severity;
+
+    console.log(problems.title);
 }
 
 module.exports ={
