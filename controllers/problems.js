@@ -27,6 +27,10 @@ async function createProblems(req,res){
     }
 }
 
+function getProblems(req, res){
+    
+}
+
 module.exports ={
     holaMundo,
     createProblems
