@@ -5,6 +5,7 @@ const api = express.Router();
 
 api.get("/holaMundo",ProblemsController.holaMundo);
 api.post("/createProblems",ProblemsController.createProblems);
+api.get("/getProblems", ProblemsController.getProblems);
 
 module.exports = application;
 

@@ -27,11 +27,23 @@ async function createProblems(req,res){
     }
 }
 
-function getProblems(req, res){
-    
+async function getProblems(req, res){
+    try {
+        const problems = await Problems.find().sort({create_at:1});
+
+        if(!problems){
+            res.status(400).send({msg:"Error al tener los problemas"});
+        }
+        else{
+            res.status(200).send(problems);
+        }
+    } catch (error) {
+        res.status(500).send(error);
+    }
 }
 
 module.exports ={
     holaMundo,
-    createProblems
+    createProblems,
+    getProblems
 }
