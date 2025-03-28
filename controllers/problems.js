@@ -3,7 +3,7 @@ const problems = require("../models/problems");
 function holaMundo(require,response){
     console.log("hola mundo");
 }
-
+//crear problemas
 async function createProblems(req,res){
     const problems = Problems();
     const params = req.body;
@@ -26,7 +26,7 @@ async function createProblems(req,res){
         res.status(500).send(error);
     }
 }
-
+//obtener problemas
 async function getProblems(req, res){
     try {
         const problems = await Problems.find().sort({create_at:1});
